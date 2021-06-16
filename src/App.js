@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 // import Accordion from './components/Accordion';
 // import Search from './components/Search';
 import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
+
 const items = [
     {
       title:'What is React?',
@@ -19,15 +21,15 @@ const items = [
 
 const options = [
     {
-        lable:'The Color Red',
+        label:'The Color Red',
         value:'red'
     },
     {
-        lable:'The Color green',
+        label:'The Color green',
         value:'green'
     },
     {
-        lable:'A shade of Blue',
+        label:'A shade of Blue',
         value:'blue'
     }
 ];
@@ -35,19 +37,24 @@ const options = [
 
 
 const App = () => {
-    const [selected,setSelected] = useState(options[0])
-    const [showDropdown,setShowDropdown] = useState(true)
+    // const [selected,setSelected] = useState(options[0])
+    // const [showDropdown,setShowDropdown] = useState(true)
+    // return (
+    //     <div>
+    //         <br/>
+    //          <button onClick={()=>setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
+    //          {showDropdown ?
+    //          <Dropdown 
+    //          selected={selected}
+    //          onSelectedChange = {setSelected}
+    //           options={options}/> :null     
+    //           }
+    //         </div>
+    // )
     return (
         <div>
-            <br/>
-             <button onClick={()=>setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
-             {showDropdown ?
-             <Dropdown 
-             selected={selected}
-             onSelectedChange = {setSelected}
-              options={options}/> :null     
-              }
-            </div>
+            <Translate/>
+        </div>
     )
 };
 
